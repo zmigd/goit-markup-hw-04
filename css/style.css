@@ -13,13 +13,7 @@
   --dairy: #fcfcfc;
 }
 
-/* ==========================================
-Single-colored icons can be modified like so:
-.icon-name {
-  font-size: 32px;
-  color: red;
-}
-========================================== */
+
 
 ul {
   padding: 0;
@@ -306,7 +300,7 @@ address {
   width: 100%;
 }
 .icon {
-  fill:--
+  fill:var(--cloud)
 }
 
 .sercive-list-icon {
@@ -320,14 +314,14 @@ address {
   justify-content: center;
   height: 112px;
 }
-.team-list-social,
-.footer-list-social {
+.list-social,
+.list-social {
   gap: 24px;
   justify-content: center;
   align-items: center;
   margin-top: 8px;
 }
-.team-list-social-item{
+.list-social-item{
   width: 40px;
   height: 40px;
 }
@@ -345,11 +339,18 @@ address {
   background-color: var(--ocean);
 }
 .footer-case {
-  align-items: start;
-  gap: 120px;
+  align-items: baseline;
+  
+}
+.footer-about{
+  margin-right: 120px;
 }
 .footer-social-text {
   margin-bottom: 16px;
+  color: var(--white);
+}
+.footer-social-text{
+  font-weight: 500;
 }
 .footer-list-social {
   margin-top: 0;
