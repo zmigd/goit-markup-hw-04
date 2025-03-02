@@ -366,7 +366,7 @@ address {
 .overlay-text {
   padding: 40px 32px;
   background-color: #4d5ae5;
-  color: #fff;
+  color: var(--cloud);
   font-family: sans-serif;
   position: absolute;
   top: 0;
