@@ -355,12 +355,15 @@ address {
 .footer-list-social {
   margin-top: 0;
 }
+.footer-social-links:hover{
+  background-color: var(--green);
+}
 
-.portfolio-list-item-animate-case {
+.portfolio-list-item-animate {
   position: relative;
   overflow: hidden;
 }
-.overlay {
+.overlay-text {
   padding: 40px 32px 0;
   background-color: var(--iris);
   color: #fff;
@@ -374,15 +377,16 @@ address {
   transform: translateY(100%);
 }
 
-.portfolio-list-item-animate:hover .overlay {
+.portfolio-list-item-animate:hover .overlay-text {
   transform: translateY(0);
 }
-.portfolio-list-item-animate {
-  transition: box-shadow 250ms ease-in-out;
+.portfolio-list-item {
+  
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list-item-animate:hover {
-  transform: scale(1.0001);
+.portfolio-list-item:hover {
+  
   box-shadow: 0 4px 10px 0 rgba(46, 47, 66, 0.16),
     0 2px 4px 0 rgba(46, 47, 66, 0.12), 0 2px 12px 0 rgba(46, 47, 66, 0.1);
 }
