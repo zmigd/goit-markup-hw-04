@@ -12,20 +12,33 @@
   --white: #fff;
   --dairy: #fcfcfc;
 }
-.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
 }
+========================================== */
 
 ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 a {
   text-decoration: none;
+  
 }
 img {
   width: 100%;
@@ -57,7 +70,7 @@ address {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
 }
@@ -65,7 +78,7 @@ address {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
 }
@@ -80,7 +93,7 @@ address {
   font-family: var(--second-family);
   font-weight: 700;
   font-size: 18px;
-  line-height: 117%;
+  line-height: 1.16667;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--iris);
@@ -89,16 +102,18 @@ address {
 .header-logo_span {
   color: var(--navy-blue);
 }
-h1 {
+
+.hero-title {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 56px;
-  line-height: 107%;
+  line-height: 1.07143;
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--white);
 }
-h2 {
+.taem-title,
+.portfolio-title {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 36px;
@@ -108,26 +123,37 @@ h2 {
   color: var(--navy-blue);
   text-transform: capitalize;
 }
-h3 {
+.service-list_title,
+.team-list_card_title,
+.portfolio-list-item_title {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 20px;
-  line-height: 120%;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
 }
-p,
-.team-list_card_text {
+
+.team-list_card_text,
+.service-list_text,
+.portfolio-list-item_text,
+.footer-text {
   font-family: var(--font-family);
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
 }
 
 .hero {
-  background: #2e2f42;
+  background: url("../images/hero-bg.jpg");
+  background-color: rgba(46, 47, 66, 0.7);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .hero-btn {
   display: block;
   background: var(--iris);
@@ -135,7 +161,7 @@ p,
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white);
   border-radius: 4px;
@@ -175,7 +201,7 @@ p,
   font-family: var(--second-family);
   font-weight: 700;
   font-size: 18px;
-  line-height: 117%;
+  line-height: 1.16667;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--iris);
@@ -189,7 +215,7 @@ p,
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--cloud);
   max-width: 264px;
@@ -200,10 +226,13 @@ p,
 }
 .flex {
   display: flex;
+}
+.header-nav {
   align-items: center;
 }
 .header-flex {
   justify-content: space-between;
+  align-items: center;
 }
 .header-nav_list,
 .header-adress-list {
@@ -211,6 +240,7 @@ p,
   gap: 40px;
 }
 .header-nav_link {
+  display: inline-block;
   padding: 24px 0;
 }
 .service-list,
@@ -225,9 +255,6 @@ p,
   margin: 0 auto;
 }
 
-.portfolio-list-item-case {
-  border-top: none;
-}
 .service-list_title,
 .team-list_card_title,
 .portfolio-list-item_title {
@@ -240,7 +267,7 @@ p,
 .team-list_card {
   width: calc((100% - 72px) / 4);
   border-radius: 0 0 4px 4px;
-  padding-bottom: 32px;
+
   box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16),
     0 1px 6px rgba(46, 47, 66, 0.08);
   background: var(--white);
@@ -248,8 +275,8 @@ p,
 .service-list_item {
   width: calc((100% - 72px) / 4);
 }
-.portfolio-list-item{
-  width: calc((100% - 48px)/3);
+.portfolio-list-item {
+  width: calc((100% - 48px) / 3);
 }
 .team-list_card-case {
   padding: 32px 0;
@@ -258,6 +285,7 @@ p,
 .portfolio-list-item-case {
   padding: 32px 16px;
   border-top: none;
+  border: 1px solid #e7e9fc;
 }
 .portfolio-list {
   flex-wrap: wrap;
@@ -265,10 +293,90 @@ p,
   column-gap: 24px;
 }
 
-.portfolio-list-item-case {
-  text-align: left;
-  border: 1px solid #e7e9fc;
-  border-top: none;
+.service-list,
+.team-list,
+.portfolio-list {
+  padding: 0;
+  width: 100%;
+}
+.icon {
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  width: 100%;
+}
+.icon-astronaut-1,
+.icon-diagram-1,
+.icon-clock-1,
+.icon-antenna-1 {
+  width: 64px;
+  height: 64px;
+}
+.sercive-list-icon {
+  padding: 24px 100px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background: #f4f4fd;
+  margin-bottom: 8px;
+}
+.team-list-social, .footer-list-social{
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+.team-list-social li, .footer-list-social li{
+   background-color: var(--iris);
+   width: 40px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 100%;
+}
+.icon-instagram-2, .icon-twitter-1, .icon-facebook-1, .icon-linkedin-1{
+  width: 16px;
+  height: 16px;
+}
+.footer-case{
+  align-items: start;
+  gap: 120px;
+}
+.footer-social-text{
+  margin-bottom: 16px;
+}
+.footer-list-social{
+  margin-top: 0;
 }
 
+.portfolio-list-item-animate-case{
+  position: relative;
+  overflow:hidden;
+}
+.overlay{
+  padding: 40px 32px 0;
+  background-color: var(--iris);
+  color: #fff;
+  font-family: sans-serif;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition: transform 250ms ease-in-out;
+    transform:translateY(100%);
+}
 
+.portfolio-list-item-animate:hover .overlay{
+  transform: translateY(0);
+  
+}
+.portfolio-list-item-animate {
+  transition: box-shadow 250ms ease-in-out;
+}
+
+.portfolio-list-item-animate:hover {
+  transform: scale(1.0001); 
+  box-shadow: 0 4px 10px 0 rgba(46, 47, 66, 0.16), 0 2px 4px 0 rgba(46, 47, 66, 0.12), 0 2px 12px 0 rgba(46, 47, 66, 0.1);
+}
